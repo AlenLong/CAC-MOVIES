@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+/* animacion logo hover */
+@keyframes tilt-n-move-shaking {
+    0% { transform: rotate(0); }
+    50% { transform: rotate(5deg); }
+    100% { transform: rotate(-5deg); }
+}
+
+body{
+    background-color: #181419;
+    color:white; 
+}
+a{
+    text-decoration: none;
+}
+header{
+    height: 10vh;
+    background-color: #9f3647;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+}
+.logo{
+font-size: 19.2px;
+font-weight: 700;
+height: 26px;
+color: rgb(255, 255, 255);
+}
+.logo:hover{
+    animation: tilt-n-move-shaking 0.25s infinite;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 40px;
+    padding: 24px 0;
+}
+
+.ulNav{
+    color: white;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+}
+.ulItem{
+    font-size: 18px;
+    margin-right: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 6px 6px;
+                    &:hover {
+                        transform: scale(0.95);
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                        border-radius: 5px;
+                    }
+}
+.ulItem a{
+    color: white;
+}
+
+.ulNav .ulItem:nth-child(3) {
+    background-color: black;
+    border-radius: 5px;
+    &:hover{
+        background-color: #9f3647;
+    }
+}
+

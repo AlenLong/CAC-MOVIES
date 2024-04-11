@@ -1,0 +1,11 @@
+{
+    "accessibility.signals.terminalQuickFix": {
+        "sound": "off"
+    },
+    "accessibility.signals.voiceRecordingStarted": {
+        "sound": "off"
+    },
+    "accessibility.signals.voiceRecordingStopped": {
+        "sound": "off"
+    }
+}
