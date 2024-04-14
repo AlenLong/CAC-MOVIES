@@ -112,20 +112,67 @@ color: rgb(255, 255, 255);
     }
 }
 
+.buscar{
+    height: 40vh;
+    width: 100vh auto;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #9f3647;
+}
+.tituloBuscar{
+    font-size: 3rem;
+}
+
+.buscarPelicula{
+    margin-top: 2rem;
+}
+.inputBuscar{
+    border: 2px solid #fff;
+    height: 7vh;
+    width: 70vh;
+    border-radius: 20px;
+}
+.botonBuscar{
+    margin-left: 1rem;
+    background-color: #9f3647;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 3px solid #fff;
+    color: #fff;
+}
+
 
 
 @media (max-width: 768px) {
-    header{height: 15git vh}
+        header{height: 15vh
+        }
         .nav{
             flex-direction: column;
         }
         .logo{
                 margin-bottom: 10px;
         }
+
+        .tituloBuscar{
+            font-size: 1.8em;
+        }
+        .inputBuscar{
+            width: 40vh;
+        }
 }
+
+
 @media (max-width: 460px) {
     .ulItem{
         margin: 0px;
+    }
+    .tituloBuscar{
+        font-size: 1.2em;
+    }
+    .inputBuscar{
+        width: 30vh;
     }
 
 }
