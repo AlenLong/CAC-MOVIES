@@ -4,12 +4,6 @@
     margin: 0;
     font-family: 'Nunito', sans-serif;
 }
-/* animacion logo hover */
-@keyframes tilt-n-move-shaking {
-    0% { transform: rotate(0); }
-    50% { transform: rotate(5deg); }
-    100% { transform: rotate(-5deg); }
-}
 
 body{
     background-color: #181419;
@@ -19,6 +13,9 @@ body{
 a{
     text-decoration: none;
 }
+
+/* HEADER */
+
 header{
     height: 10vh;
     background-color: #9f3647;
@@ -28,13 +25,19 @@ header{
 
 }
 .logo{
-font-size: 20px;
+font-size: 30px;
 font-weight: 700;
 height: 26px;
 color: rgb(255, 255, 255);
 }
 .logo:hover{
     animation: tilt-n-move-shaking 0.25s infinite;
+}
+/* animacion logo hover */
+@keyframes tilt-n-move-shaking {
+    0% { transform: rotate(0); }
+    50% { transform: rotate(5deg); }
+    100% { transform: rotate(-5deg); }
 }
 
 .nav{
@@ -55,7 +58,7 @@ color: rgb(255, 255, 255);
     font-weight: 600;
 }
 .ulItem{
-    font-size: 15px;
+    font-size: 20px;
     margin-right: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
     padding: 6px 10px;
@@ -77,6 +80,7 @@ color: rgb(255, 255, 255);
     }
 }
 
+/* BANNER */
 
 .banner{
     background: linear-gradient(to right top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url(/img/banner-bg.jpg);
@@ -89,21 +93,23 @@ color: rgb(255, 255, 255);
     align-items: center;
     text-align: center;
 }
-.titulo{
-    font-size: 4rem;
+.tituloBanner{
+    font-size: 5rem;
     font-weight: 700;
     margin-bottom: 1rem;
 }
 .subtitulo{
-    font-size: 2.2rem;
+    font-size: 3rem;
     font-weight: 400;
     margin-bottom: 1rem;
 }
 .botonRegistrarse{
+    font-size: 1.7rem;
+    font-weight: 700;
     background-color: #9f3647;
     text-decoration: none;
     color: #fff;
-    padding: 1rem 2rem;
+    padding: 2rem 3rem;
     border-radius: 10px;
     &:hover{
         transform: scale(0.9);
@@ -111,6 +117,8 @@ color: rgb(255, 255, 255);
         box-shadow: 3px 4px 6px rgba(255, 255, 255, 0.5);
     }
 }
+
+/* BUSCADOR */
 
 .buscar{
     height: 40vh;
@@ -137,13 +145,160 @@ color: rgb(255, 255, 255);
 .botonBuscar{
     margin-left: 1rem;
     background-color: #9f3647;
-    padding: 10px 20px;
-    border-radius: 25px;
-    border: 3px solid #fff;
+    padding: 15px 30px;
+    border-radius: 50px;
+    border: 4px solid #fff;
     color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
 
+/* PELICULAS TENDENCIA */
+.tituloTendencia{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    font-size: 3rem;
+}
+
+.movieSection{
+    margin: 4rem 8rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.card{
+    padding: 20px;
+    width: 300px;
+    height: 400px;
+    position: relative; /* Añade posición relativa para que el título pueda estar posicionado absolutamente en relación con la tarjeta */
+    overflow: hidden;
+}
+.card-img {
+    border-radius: 30px;
+    object-fit: cover; 
+    width: 100%; 
+    height: 100%; 
+    padding: 1px;
+    transition: filter 0.5s ease; 
+    &:hover {
+        transform: scale(0.9);
+        transition: transform 0.3s, box-shadow 0.3s;
+        box-shadow: 5px 5px 5px 5px rgb(255, 0, 0);
+    }
+  }
+
+  .card:hover .card-img {
+    filter: blur(5px); /* Aplica un desenfoque solo a la imagen cuando se pasa el cursor */
+  }
+
+  .card-title {
+    user-select: none;
+    color: #fff;
+    font-size: 1.5rem;
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    opacity: 0; 
+    transition: opacity 0.5s ease; 
+    z-index: 1; 
+  }
+
+  .card:hover .card-title {
+    opacity: 1; 
+  }
+
+  /* BOTONES PREV NEXT */
+
+  .botonesPrevNext{
+    display: flex;
+    justify-content: center;
+  }
+  .prevNext{
+    margin-left: 1rem;
+    background-color: #9f3647;
+    padding: 20px 30px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  /* PELICULAS ACLAMADAS */
+  .tituloAclamadas{
+    border-top: 1px solid #9f3647;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    font-size: 3rem;
+  }
+  .scrollContainer {
+    overflow-x: auto; /* Habilita el scroll horizontal */
+    white-space: nowrap; /* Evita que los elementos se envuelvan */
+  }
+  .movieSection2{
+    margin: 4rem 8rem;
+    display: inline-flex;
+  }
+
+
+  /* FOOTER */
+
+  footer{
+    height: 18vh;
+    background-color: #9f3647;
+    top: 0;
+}
+
+
+.navFooter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 40px;
+    padding: 24px 0;
+}
+
+.ulNavFooter{
+    color: white;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    font-weight: 600;
+}
+.ulItemFooter{
+    font-size: 20px;
+    margin-right: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 6px 10px;
+                    &:hover {
+                        transform: scale(0.95);
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                        border-radius: 5px;
+                    }
+}
+.ulItemFooter a{
+    color: white;
+}
+
+.ulNavFooter .ulItemFooter:nth-child(4) {
+    background-color: black;
+    border-radius: 5px;
+    &:hover{
+        background-color: #9f3647;
+    }
+}
 
 @media (max-width: 768px) {
         header{height: 15vh

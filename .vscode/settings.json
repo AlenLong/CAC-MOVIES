@@ -7,5 +7,6 @@
     },
     "accessibility.signals.voiceRecordingStopped": {
         "sound": "off"
-    }
+    },
+    "liveServer.settings.port": 5501
 }
