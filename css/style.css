@@ -17,8 +17,8 @@ a{
 /* HEADER */
 
 header{
-    height: 10vh;
     background-color: #9f3647;
+    height: 12vh;
     position: sticky;
     top: 0;
     z-index: 10;
@@ -121,7 +121,7 @@ color: rgb(255, 255, 255);
 /* BUSCADOR */
 
 .buscar{
-    height: 40vh;
+    height: 50vh;
     width: 100vh auto;
     margin-top: 3rem;
     display: flex;
@@ -130,27 +130,38 @@ color: rgb(255, 255, 255);
     border-bottom: 1px solid #9f3647;
 }
 .tituloBuscar{
-    font-size: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    font-size: 3.1rem;
 }
 
 .buscarPelicula{
-    margin-top: 2rem;
+
+
 }
-.inputBuscar{
+.inputBuscar::placeholder {
+    margin-left: 50px; 
+}
+.inputBuscar{border: none; outline: none;
+    border-top: 3rem;
+    font-size: 1.5rem;
+    initial-letter-align: 50rem;
     border: 2px solid #fff;
-    height: 7vh;
-    width: 70vh;
-    border-radius: 20px;
+    height: 8.5vh;
+    width: 85vh;
+    border-radius: 50px;
 }
 .botonBuscar{
+    height: 8.5vh;
+    width: 9rem;
     margin-left: 1rem;
     background-color: #9f3647;
     padding: 15px 30px;
     border-radius: 50px;
     border: 4px solid #fff;
     color: #fff;
-    font-size: 1.2rem;
-    font-weight: 700;
+    font-size: 1.5rem;
+    font-weight: 400;
 }
 
 
@@ -218,6 +229,7 @@ color: rgb(255, 255, 255);
   .botonesPrevNext{
     display: flex;
     justify-content: center;
+    margin-bottom: 7rem;
   }
   .prevNext{
     margin-left: 1rem;
@@ -253,6 +265,7 @@ color: rgb(255, 255, 255);
   /* FOOTER */
 
   footer{
+    padding-top: 2rem;
     height: 18vh;
     background-color: #9f3647;
     top: 0;
@@ -300,26 +313,61 @@ color: rgb(255, 255, 255);
     }
 }
 
-@media (max-width: 768px) {
-        header{height: 15vh
+@media (max-width: 950px) {
+        header{height: 22vh
         }
         .nav{
             flex-direction: column;
         }
-        .logo{
-                margin-bottom: 10px;
+        .ulNav{
+            
+            flex-direction: column;
+            text-align: center;
         }
-
+        .logo{
+                margin-bottom: 30px;
+        }
+        .buscar{
+            height: 35vh;
+        }
         .tituloBuscar{
+            margin-bottom: 3rem;
             font-size: 1.8em;
         }
         .inputBuscar{
+            height: 3rem;
             width: 40vh;
         }
-}
+        .botonBuscar{
+            padding: 0;
+            margin: 0;
+            align-items: center;
+            height: 3rem;
+        }
+        .card-img{
+            width: 300px;
+            padding: 0px;
+        }
+        .tituloTendencia{
+            font-size: 2.5rem;
+        }
+        .tituloAclamadas{
+            font-size: 2.5rem;
+        }
+        footer{
+            height: 30vh;
+        }
+
+        .ulNavFooter{
+            flex-direction: column;
+            font-size: 3rem;
+        }
+
+    }
 
 
-@media (max-width: 460px) {
+
+@media (max-width: 550px) {
     .ulItem{
         margin: 0px;
     }
@@ -331,3 +379,5 @@ color: rgb(255, 255, 255);
     }
 
 }
+
+
